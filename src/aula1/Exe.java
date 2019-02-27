@@ -1,3 +1,4 @@
+
 package aula1;
 
 import java.io.File;
@@ -15,7 +16,6 @@ public class Exe {
 	
 	public void escreverArquivo() {
 		String content = "";
-		int i = 0 ;
 		File file = new File("C://Exercicios/texto.txt");
 		if(!file.exists()) {
 			criarArquivo(file);
@@ -24,9 +24,8 @@ public class Exe {
 			FileWriter fw = new FileWriter( file, true );
 			do  {
 				content = JOptionPane.showInputDialog("Digite qualquer palavra ou frase para inserir no txt");
-				fw.write("\n" + content);
-				fw.write(" Linha: " + i);
-				i++;
+				fw.write(content);
+				fw.write("\n\r");
 				fw.flush();
 			} while (!"sair".equals(content));
 			
