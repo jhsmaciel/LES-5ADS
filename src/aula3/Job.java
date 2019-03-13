@@ -34,6 +34,5 @@ public class Job implements Runnable {
 		threadJoao.setPriority(Thread.NORM_PRIORITY);
 		threadFeijao.start();
 
-		
 	}
 }
